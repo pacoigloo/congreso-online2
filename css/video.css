@@ -1,0 +1,203 @@
+@font-face {
+  font-family: 'NeoSansIntel';
+  src: url('../fonts/NeoSansIntel.eot');
+  src: url('../fonts/NeoSansIntel.ttf') format('truetype');
+}
+@font-face {
+  font-family: 'NeoSansIntelLight';
+  src: url('../fonts/NeoSansIntel-Light.ttf') format('truetype');
+}
+@font-face {
+  font-family: 'NeoSansIntelMediumItalic';
+  src: url('../fonts/NeoSansIntel-MediumItalic.ttf') format('truetype');
+}
+body {
+  font-family: 'NeoSansIntel';
+  margin: 0;
+  background-color: #f6f6f6;
+  overflow-x: hidden;
+}
+header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 100;
+}
+header > * {
+  display: inline-block;
+  margin: 1vw;
+}
+header #menu-fijo {
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+header img {
+  width: 20px;
+}
+header #menu-fijo > div {
+  display: inline-block;
+  padding: 0 2vw;
+  color: #2b8abf;
+  cursor: pointer;
+}
+header #menu-fijo > div:not(:first-child) {
+  border-left: 1px solid #fff;
+}
+header > h1 {
+  font-size: 2.2vw;
+  color: #2b8abf;
+  margin-bottom: 0;
+  margin-top: 0;
+  font-family: 'NeoSansIntelMediumItalic';
+  vertical-align: top;
+  /*margin-top: 13vh;*/
+}
+header > h2 {
+  font-size: 1.1vw;
+  color: #2b8abf;
+  font-style: italic;
+  margin: 0;
+  transform: translateX(8.5vw);
+  vertical-align: bottom;
+  position: relative;
+  left: -17vw;
+}
+/**/
+.muestra-congresos {
+  position: relative;
+  margin: 0 auto;
+  width: 80vw;
+}
+.muestra-congresos > h1 {
+  margin: 0;
+  color: #2b8abf;
+  font-family: 'NeoSansIntelLight';
+  font-size: 2vw;
+  display: inline-block;
+  position: relative;
+  top: -4vh;
+}
+.muestra-congresos > img {
+  display: inline-block;
+  height: 11vh;
+  left: 1vw;
+  top: 0vh;
+  position: relative;
+}
+.muestra-congresos > video {
+  display: block;
+  width: 100%;
+}
+.muestra-congresos > #conferencia-navegacion > div {
+  display: inline-block;
+  color: #2b8abf;
+  font-family: 'NeoSansIntelLight';
+  font-weight: bold;
+  padding-top: 2vh;
+}
+.muestra-congresos > #conferencia-navegacion > div:last-child {
+  float: right;
+  position: relative;
+  right: 30%;
+}
+.muestra-congresos > #conferencia-capitulos {
+  position: absolute;
+  left: 73%;
+  top: 50%;
+  width: 27%;
+}
+.muestra-congresos > #conferencia-capitulos > #nombre-conferencia {
+  font-weight: bold;
+  font-size: 1.3vw;
+  color: #2b8abf;
+}
+.muestra-congresos > #conferencia-capitulos > #presentador-conferencia {
+  font-size: 1.2vw;
+  color: #2b8abf;
+  font-family: 'NeoSansIntelLight';
+}
+.muestra-congresos > #conferencia-capitulos > .capitulos {
+  display: inline-block;
+  margin: 4vh 2vh 2vh 0;
+}
+.muestra-congresos > #conferencia-capitulos > .capitulos > div {
+  color: #58595b;
+  font-size: 1.1vw;
+  border-top: 1px solid #959595;
+  padding: 1vh;
+}
+.muestra-congresos > #conferencia-capitulos > .capitulos > div.capitulo-activo {
+  font-weight: bold;
+  color: #2b8abf;
+}
+#calificacion {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+#calificacion > #titulo-calificacion {
+  font-size: 0.6vw;
+  color: #58595b;
+}
+#calificacion > #estrellas-calificacion {
+  border-bottom: 1px solid #afafb0;
+  padding-bottom: 2px;
+}
+#calificacion > #estrellas-calificacion > img {
+  width: 1vw;
+}
+#calificacion > #total-promedio {
+  color: #5f6062;
+  display: inline-block;
+  vertical-align: top;
+  font-size: 2vw;
+  margin-left: 1vw;
+}
+#calificacion > #grupo-izquierda {
+  display: inline-block;
+  position: absolute;
+  right: 0;
+  text-align: right;
+}
+#calificacion > #grupo-izquierda > #estrellas-promedio {
+  display: inline-block;
+  position: absolute;
+  right: 0px;
+  width: 4vw;
+}
+#calificacion > #grupo-izquierda > #estrellas-promedio > img {
+  width: 0.5vw;
+  top: 0;
+  vertical-align: top;
+}
+#calificacion > #grupo-izquierda > #munequin {
+  display: inline-block;
+  height: 0.8vw;
+}
+#calificacion > #grupo-izquierda > #cantidad-votantes {
+  display: inline-block;
+  font-size: 0.8vw;
+}
+/*Footer*/
+footer {
+  position: fixed;
+  bottom: 0;
+  background-image: -ms-linear-gradient(top, #e8e8e8 0%, #f6f6f6 100%);
+  background-image: -moz-linear-gradient(top, #e8e8e8 0%, #f6f6f6 100%);
+  background-image: -o-linear-gradient(top, #e8e8e8 0%, #f6f6f6 100%);
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, #e8e8e8), color-stop(1, #f6f6f6));
+  background-image: -webkit-linear-gradient(top, #e8e8e8 0%, #f6f6f6 100%);
+  background-image: linear-gradient(to bottom, #e8e8e8 0%, #f6f6f6 100%);
+}
+footer > div {
+  display: inline-block;
+  color: #2b8abf;
+  text-align: center;
+  padding: 0.3vw;
+  box-sizing: border-box;
+  margin: 0.7vw 0;
+}
+footer > div:not(:last-child) {
+  border-right: 1px solid #d7d7d7;
+}
