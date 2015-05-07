@@ -107,19 +107,25 @@ header > h2 {
   top: 50%;
   width: 27%;
 }
-.muestra-congresos > #conferencia-capitulos > #nombre-conferencia {
+#present {
+  display: inline-block;
+  vertical-align: top;
+  left: 2vw;
+  position: relative;
+}
+#nombre-conferencia {
   font-weight: bold;
-  font-size: 1.3vw;
+  font-size: 1.9vw;
   color: #2b8abf;
 }
-.muestra-congresos > #conferencia-capitulos > #presentador-conferencia {
-  font-size: 1.2vw;
+#presentador-conferencia {
+  font-size: 1.5vw;
   color: #2b8abf;
   font-family: 'NeoSansIntelLight';
 }
 .muestra-congresos > #conferencia-capitulos > .capitulos {
   display: inline-block;
-  margin: 4vh 2vh 2vh 0;
+  margin: 0 2vh 2vh 0;
 }
 .muestra-congresos > #conferencia-capitulos > .capitulos > div {
   color: #58595b;
@@ -200,4 +206,7 @@ footer > div {
 }
 footer > div:not(:last-child) {
   border-right: 1px solid #d7d7d7;
+}
+.conf-activa {
+  font-weight: bold;
 }
