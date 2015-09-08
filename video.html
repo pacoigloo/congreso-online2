@@ -5,30 +5,52 @@
         <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
         <title>Tecnoquímicas Farma</title>
         <link href="css/video.css" rel="stylesheet" type="text/css">
+        <script type="text/javascript" src="js/jquery-1.11.2.min.js"></script>
+        <script type="text/javascript" src="js/video.js"></script>
     </head>
     <body>
         <header>
-            <img src="img/home-azul.png" alt="home"/>
-            <h1>Congreso Online</h1>
-            <h2>Tecnoquímicas</h2>
-            <div id="menu-fijo">
-                <div id="1" class="conf-activa">Otorrino</div>
-                <div id="2">Pediatría</div>
-                <div id="3">Cardiología</div>
-                <div id="4">Sistema N. Central</div>
+            <div id="encabezado">
+                <div id='titulo'>
+                    <img src="img/home-azul.png" alt="home"/>
+                    <h1>Congreso Online<br><span>Tecnoquímicas</span></h1>
+                    <!--<h2>Tecnoquímicas</h2>-->
+                </div>
+                <div id="menu-fijo">
+                    <div id="1">Gastrointestinal</div>
+                    <div id="2">Ortopedia</div>
+                    <div id="3">Otorrino</div>
+                    <div id="4">Pediatría</div>
+                </div>
             </div>
         </header>
+        <section id="seccion-info">
+            <div id="contenedor-info">
+                <div id="info-conferencia">
+                    <h1>Actualización en Rinitis</h1>
+                    <h2>Dr. Gustavo Ordoñez</h2>
+                </div>
+                <div id="terapia">
+                    <div id="nombre-terapia"><h1>Pediatría</h1></div>
+                    <img src="img/actualidad_pediatria.png"></img>
+                </div>
+            </div>
+        </section>
         <section class="muestra-congresos">
-            <img src="img/icono-otorrino.png" alt="otorrino">
+            <!--<img src="img/icono-otorrino.png" alt="otorrino">
             <div id="present">
                 <div id="nombre-conferencia">Reflujo laringofaríngeo</div>
                 <div id="presentador-conferencia">Dr. Andres Vallejo</div>
-            </div>
-            <video>
-                <source src="http://player.vimeo.com/external/121706727.hd.mp4?s=735bb31f46276299290b7bcc295d8f13&profile_id=113" type="video/mp4">
+            </div>-->
+            <video preload="auto" autoplay id="principal">
+                <source src="https://player.vimeo.com/external/138166011.hd.mp4?s=f448b77777f2aa5f82c3450a407d6445&profile_id=113" type="video/mp4">
                 Your browser does not support the video tag.
             </video>
             <div id="conferencia-capitulos">
+                <div id="pauta">
+                    <a href="http://www.tqfarma.com/productos/vademecum-tecnoquimicas/linea-respiratoria/alerfast" target="_blank">
+                    <img src="img/pauta_alerfast.png"/></a>
+                </div>
                 <div id="calificacion">
                     <div id="titulo-calificacion">Calificar esta conferencia</div>
                     <div id="estrellas-calificacion">
@@ -51,7 +73,7 @@
                         <div id="cantidad-votantes">216</div>
                     </div>
                 </div>
-                <div class="capitulos">
+               <!-- <div class="capitulos">
                     <div class="capitulo-activo">Capitulo 1</div>
                     <div>Capitulo 2</div>
                     <div>Capitulo 3</div>
@@ -62,22 +84,41 @@
                     <div>Capitulo 6</div>
                     <div>Capitulo 7</div>
                     <div>Capitulo 8</div>
-                </div>
+                </div>-->
             </div>
             <div id="conferencia-navegacion">
-                <div>&lt; Regresar</div>
-                <div>Siguiente Conferencia &gt;&gt;</div>
+                <div id="regresar">&lt; Regresar</div>
+                <div id="siguiente">Siguiente Conferencia &gt;</div>
             </div>
         </section>
         <footer>
-            <div>Aflux®</div>
-            <div>Rinaid®</div>
-            <div>Benzirin® Verde</div>
-            <div>Aflux®</div>
-            <div>Rinaid®</div>
-            <div>Benzirin® Verde</div>
+            <div id="med">
+                <div class="nombre-med">Aflux®</div>
+                <div class="nombre-med">Rinaid®</div>
+                <div class="nombre-med">Benzirin® Verde</div>
+                <div class="nombre-med">Aflux®</div>
+            </div>
+            <div id="logo-tq">
+                <img src="img/tqLogo.png">
+            </div>
         </footer>
-        <script type="text/javascript" src="js/jquery-1.11.2.min.js"></script>
-        <script type="text/javascript" src="js/video.js"></script>
     </body>
+    <script>
+        var ua = navigator.userAgent.toLowerCase(); 
+          if (ua.indexOf('safari') != -1) { 
+            if (ua.indexOf('chrome') > -1) {
+                //alert("1") // Chrome
+            } else {
+                //alert("2") // Safari
+                $("#principal").prop("controls",true);
+                document.ontouchmove = function(event){
+                    event.preventDefault();
+                }
+                setTimeout(function(){
+                    var videoInt = $('#principal');
+                    videoInt[0].play();
+                }, 1500);
+            }
+          }
+    </script>
 </html>

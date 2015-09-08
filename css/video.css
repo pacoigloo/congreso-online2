@@ -14,56 +14,129 @@
 body {
   font-family: 'NeoSansIntel';
   margin: 0;
-  background-color: #f6f6f6;
+  background-color:#EBEBEB;
   overflow-x: hidden;
 }
+
+/*----------Header-----------*/
 header {
-  position: fixed;
   top: 0;
   width: 100%;
   z-index: 100;
 }
-header > * {
-  display: inline-block;
-  margin: 1vw;
+#encabezado{
+  width: 80vw;
+  margin: 0 auto;
+  overflow: hidden;
 }
-header #menu-fijo {
-  position: absolute;
-  right: 0;
-  top: 0;
+/*Lateral izquierdo*/
+#titulo{
+  width:40%;
+  float:left;
 }
 header img {
-  width: 20px;
-}
-header #menu-fijo > div {
   display: inline-block;
-  padding: 0 2vw;
-  color: #2b8abf;
-  cursor: pointer;
+    width: 4.7%;
+    margin-top: 1.7%;
+    margin-right: 3%;
 }
-header #menu-fijo > div:not(:first-child) {
-  border-left: 1px solid #fff;
-}
-header > h1 {
-  font-size: 2.2vw;
+#titulo > h1 {
+  font-size: 1.8vw;
+  font-weight: 500;
   color: #2b8abf;
   margin-bottom: 0;
   margin-top: 0;
   font-family: 'NeoSansIntelMediumItalic';
   vertical-align: top;
+  display:inline-block;
   /*margin-top: 13vh;*/
 }
-header > h2 {
-  font-size: 1.1vw;
-  color: #2b8abf;
-  font-style: italic;
-  margin: 0;
-  transform: translateX(8.5vw);
-  vertical-align: bottom;
-  position: relative;
-  left: -17vw;
+#titulo > h1 span{
+  font-size: 0.8vw;
+  font-weight: 100;
+  float:right;
 }
+#titulo > h2 {
+    font-size: 1.1vw;
+    color: #2b8abf;
+    font-style: italic;
+    margin: 0;
+    transform: translateX(8.5vw);
+    position: relative;
+    margin-left: 25px; 
+    width: auto;
+    display: table-caption;
+}
+/*Lateral derecho*/
+#menu-fijo {
+  float: right;
+  margin-top: 0.8%;
+  margin-right: 5%;
+}
+#menu-fijo > div {
+   display: inline-block;
+    padding: 0 1vw;
+    color: #2b8abf;
+    cursor: pointer;
+    font-size: 1.1vw;
+    font-weight: 100;
+}
+#menu-fijo > div:last-child{
+  padding-right:0;
+}
+/*---------------------------*/
+
+/*--Encabezado Conferencia --*/
+#seccion-info{
+  background-color:#213a62;
+  margin-top:20px;
+}
+#contenedor-info{
+  margin:0 auto;
+  color:white;
+  width:80vw;
+  padding-top:0.5%;
+  padding-bottom:0.6%;
+  overflow:hidden;
+}
+#info-conferencia{
+  float:left;
+}
+#info-conferencia > h1{
+  font-size: 1.8vw;
+  margin:0;
+}
+#info-conferencia >h2{
+  font-size: 1.5vw;
+  font-weight:100;
+  margin:0;
+  margin-top:0.4%;
+}
+#terapia{
+  float: right;
+  margin-right: 10%;
+}
+#nombre-terapia{
+  float: left;
+  font-size: 48px;
+}
+#nombre-terapia>h1{
+  font-family: 'NeoSansIntelLight';
+    font-size: 3vw;
+    margin: 0;
+    font-weight: 100;
+    margin-top: 3%;
+    margin-right: 2.8vw;
+  
+}
+#terapia > img{
+ position: absolute;
+ width: 8%;
+ margin-top: -2%;
+}
+/*---------------------------*/
 /**/
+
 .muestra-congresos {
   position: relative;
   margin: 0 auto;
@@ -78,34 +151,12 @@ header > h2 {
   position: relative;
   top: -4vh;
 }
-.muestra-congresos > img {
+/*.muestra-congresos > img {
   display: inline-block;
   height: 11vh;
   left: 1vw;
   top: 0vh;
   position: relative;
-}
-.muestra-congresos > video {
-  display: block;
-  width: 100%;
-}
-.muestra-congresos > #conferencia-navegacion > div {
-  display: inline-block;
-  color: #2b8abf;
-  font-family: 'NeoSansIntelLight';
-  font-weight: bold;
-  padding-top: 2vh;
-}
-.muestra-congresos > #conferencia-navegacion > div:last-child {
-  float: right;
-  position: relative;
-  right: 30%;
-}
-.muestra-congresos > #conferencia-capitulos {
-  position: absolute;
-  left: 73%;
-  top: 50%;
-  width: 27%;
 }
 #present {
   display: inline-block;
@@ -122,36 +173,35 @@ header > h2 {
   font-size: 1.5vw;
   color: #2b8abf;
   font-family: 'NeoSansIntelLight';
+}*/
+.muestra-congresos > video {
+  display: block;
+  width: 100%;
 }
-.muestra-congresos > #conferencia-capitulos > .capitulos {
-  display: inline-block;
-  margin: 0 2vh 2vh 0;
+
+#pauta{
+    width: 60%;
+    float: left;
 }
-.muestra-congresos > #conferencia-capitulos > .capitulos > div {
-  color: #58595b;
-  font-size: 1.1vw;
-  border-top: 1px solid #959595;
-  padding: 1vh;
+#pauta img{
+  width:100%;
 }
-.muestra-congresos > #conferencia-capitulos > .capitulos > div.capitulo-activo {
-  font-weight: bold;
-  color: #2b8abf;
-}
+/*-------Calificacion-------*/
 #calificacion {
-  position: absolute;
-  top: 0;
-  right: 0;
+ float:right;
 }
 #calificacion > #titulo-calificacion {
   font-size: 0.6vw;
   color: #58595b;
+  margin-bottom:5.5%;
 }
 #calificacion > #estrellas-calificacion {
   border-bottom: 1px solid #afafb0;
   padding-bottom: 2px;
+  float:right;
 }
 #calificacion > #estrellas-calificacion > img {
-  width: 1vw;
+  width: 1.1vw;
 }
 #calificacion > #total-promedio {
   color: #5f6062;
@@ -171,6 +221,7 @@ header > h2 {
   position: absolute;
   right: 0px;
   width: 4vw;
+  margin-top:20%;
 }
 #calificacion > #grupo-izquierda > #estrellas-promedio > img {
   width: 0.5vw;
@@ -180,15 +231,65 @@ header > h2 {
 #calificacion > #grupo-izquierda > #munequin {
   display: inline-block;
   height: 0.8vw;
+  margin-top:55%;
 }
 #calificacion > #grupo-izquierda > #cantidad-votantes {
   display: inline-block;
   font-size: 0.8vw;
 }
+/*---------------------------*/
+
+#conferencia-navegacion{
+  margin-top:2%;
+}
+.muestra-congresos > #conferencia-navegacion > div {
+    display: inline-block;
+    color: white;
+    font-family: 'NeoSansIntelLight';
+    font-weight: bolder;
+    padding: 0.3% 1.4% 0.5% 1.4%;
+    width: auto;
+    background-color: #213a62;
+    border-radius: 9px;
+    font-size: 1.4vw;
+  
+}
+.muestra-congresos > #conferencia-navegacion > div:last-child {
+  float: right;
+  position: relative;
+  right: 30%;
+}
+.muestra-congresos > #conferencia-capitulos {
+  position: absolute;
+  left: 73%;
+  top: 50%;
+  width: 27%;
+}
+
+
+/*.muestra-congresos > #conferencia-capitulos > .capitulos {
+  display: inline-block;
+  margin: 0 2vh 2vh 0;
+}
+.muestra-congresos > #conferencia-capitulos > .capitulos > div {
+  color: #58595b;
+  font-size: 1.1vw;
+  border-top: 1px solid #959595;
+  padding: 1vh;
+}
+.muestra-congresos > #conferencia-capitulos > .capitulos > div.capitulo-activo {
+  font-weight: bold;
+  color: #2b8abf;
+}*/
+
 /*Footer*/
 footer {
-  position: fixed;
-  bottom: 0;
+  position: absolute;
+  
+  width:100%;
+}
+#med{
+  float:left;
   background-image: -ms-linear-gradient(top, #e8e8e8 0%, #f6f6f6 100%);
   background-image: -moz-linear-gradient(top, #e8e8e8 0%, #f6f6f6 100%);
   background-image: -o-linear-gradient(top, #e8e8e8 0%, #f6f6f6 100%);
@@ -196,16 +297,28 @@ footer {
   background-image: -webkit-linear-gradient(top, #e8e8e8 0%, #f6f6f6 100%);
   background-image: linear-gradient(to bottom, #e8e8e8 0%, #f6f6f6 100%);
 }
-footer > div {
+.nombre-med{
+  font-size: 1.2vw;
+  font-weight: 900;
   display: inline-block;
   color: #2b8abf;
   text-align: center;
-  padding: 0.3vw;
+  padding: 0.3vw 4.5vw;
   box-sizing: border-box;
   margin: 0.7vw 0;
-}
-footer > div:not(:last-child) {
   border-right: 1px solid #d7d7d7;
+}
+/*#med > div:not(:last-child) {
+  border-right: 1px solid #d7d7d7;
+}*/
+
+#logo-tq{
+  float:right;
+}
+#logo-tq img{
+  width:12vw;
+  float:right;
+  margin-bottom:0px;
 }
 .conf-activa {
   font-weight: bold;
