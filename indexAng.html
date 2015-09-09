@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+        <title>Tecnoquímicas Farma</title>
+        <link href="css/home.css" rel="stylesheet" type="text/css">
+    </head>
+    <body ng-app="single-page-app">
+        <header>
+            <img src="img/home.png" alt="home"/>
+            <div id="menu-fijo">
+                <div id="1">Otorrino</div>
+                <div id="2">Pediatría</div>
+                <div id="3">Cardiología</div>
+                <div id="4">Sistema N. Central</div>
+            </div>
+        </header>
+        <div ng-view></div>
+        <footer>
+            <div id="copyright">Copyright (c) 2014 Tecnoquímicas</div>
+            <div id="terminos">Términos y condiciones</div>
+            <div id="tecnoquimicas">Tecnoquímicas</div>
+        </footer>
+        <script src="js/angular.min.js"></script>
+        <script src="js/angular-route.min.js"></script>
+        <script type="text/javascript" src="js/jquery-1.11.2.min.js"></script>
+        <script type="text/javascript" src="js/index.js"></script>
+    </body>
+</html>
