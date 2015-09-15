@@ -1,42 +1,64 @@
-html{
-    width:100%;
-    height:100%;
-    overflow:hidden;
+@font-face {
+    font-family: 'NeoSansIntel';
+    src: url('../fonts/NeoSansIntel.eot');
+    src: url('../fonts/NeoSansIntel.ttf') format('truetype');
 }
-body{
-    margin:0;
-    overflow:hidden;
+
+html {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
 }
-#ingreso{
-    z-index:1;
-    margin:0 auto;
-    text-align:center;
+
+body {
+    margin: 0;
+    overflow: hidden;
 }
-#ingreso > video ,#interior > video{
-    height:100vh;
-    width:100vw;
+
+#ingreso > video,
+#interior video {
+    height: 100vh;
+    width: 100vw;
 }
-#boton-ingreso-edif{
-    width:11%;
-    height:15%;
-    cursor:pointer;
-    background-color:transparent;
-    position: absolute;
-    left: 50%;
+
+#ingreso {
+    z-index: 2;
+    margin: 0 auto;
+    text-align: center;
+}
+
+#menu-inicio {
     top: 50%;
-    margin-left: -13%;
-    margin-top: 1.5%;
-    z-index: 4;
+    left: 50%;
+    z-index: 3;
+    position: absolute;
+    margin-top: -8.7%;
+    margin-left: -15%;
 }
 
-#interior{
-    z-index:3;
-    position:absolute;
-    text-align:center;
-    margin:0;
+#btn-ingreso-gastro,
+#btn-ingreso-ortopedia,
+#btn-ingreso-otorrino,
+#btn-ingreso-pediatria,
+#btn-ingreso-otras {
+    width: 13.8vw;
+    height: 2vw;
+    cursor: pointer;
 }
 
-#boton-interior-edif{
+#interior {
+    z-index: 1;
+    position: absolute;
+    text-align: center;
+    margin: 0 auto;
+    width: 100%;
+    height: 100%;
+    display: block;
+    visibility: hidden;
+}
+
+
+/*#btn-interior-edif{
     width:29%;
     height:13%;
     cursor:pointer;
@@ -48,7 +70,7 @@ body{
     z-index: 2;
     display:none;
 }
-#boton-interior-edif2{
+#btn-interior-edif2{
     width:29%;
     height:12%;
     cursor:pointer;
@@ -60,7 +82,7 @@ body{
     z-index: 6;
     display:none;
 }
-#boton-interior-edif3{
+#btn-interior-edif3{
     width:29%;
     height:12%;
     cursor:pointer;
@@ -71,13 +93,117 @@ body{
     margin-top: 0;
     z-index: 7;
     display:none;
-}
+}*/
 
-/* Boton del iniciar en safari */
-img{
-    display:none;
+
+/* btn del iniciar en safari */
+
+#inicio-safari {
+    display: none;
     position: absolute;
     width: 100%;
-    height:100%;
+    height: 100%;
     vertical-align: middle;
+}
+
+
+/* Menu interno*/
+
+#nav {
+    z-index: 5;
+    position: absolute;
+    width: 100%;
+    display: none;
+    top: 50%;
+    margin-top: -23%;
+}
+
+#menu {
+    margin: 0 auto;
+    width: 65%;
+}
+
+#menu img {
+    width: 2vw;
+}
+
+#menu ul {
+    background-color: white;
+    list-style: none;
+    padding: 0.6% 0%;
+}
+
+#menu li {
+    display: inline-block;
+    padding: 0.5% 3%;
+    border-right: 1px solid #2f6593;
+}
+
+#menu li:first-child {
+    display: inline-block;
+    padding: 0.5% 1.5%;
+    border-right: 1px solid #2f6593;
+}
+
+#menu li:last-child {
+    border-right: none;
+}
+
+#menu a {
+    font-family: 'NeoSansIntel';
+    font-size: 1vw;
+    color: #2f6593;
+    text-decoration: none;
+}
+
+
+/*Pabellones*/
+
+#pabellon-gastro,
+#pabellon-ortopedia,
+#pabellon-otorrino,
+#pabellon-pediatria,
+#pabellon-otras {
+    display: block;
+    z-index: 4;
+    position: absolute;
+    visibility: hidden;
+    width: 100%;
+    height: 100%;
+}
+
+.conferencias {
+    z-index: 5;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-top: -9.5%;
+    margin-left: -10%;
+}
+
+.boton-interior {
+    height: 4vw;
+    width: 19.8vw;
+    margin-bottom: 1.4vh;
+}
+
+.poster-video {
+    display: none;
+    z-index: 4;
+    object-fit: scale-down;
+    box-sizing: border-box;
+    height: 100%;
+    width: 100%;
+}
+
+@media (max-width:1024px) {
+    #menu-inicio {
+        margin-top: -7.5%;
+    }
+    #nav{
+        margin-top:-24%;
+    }
+    #menu{
+        width:69%;
+    }
 }

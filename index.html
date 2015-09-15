@@ -1,31 +1,119 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-        <title>Congreso Online</title>
-        <link href="css/animacion.css" rel="stylesheet" type="text/css">
-        <script type="text/javascript" src="js/jquery-1.11.2.min.js"></script>
-        <script type="text/javascript" src="js/animacion.js"></script>
-    </head>
-    <body>
-        <section id='contenidoPrincipal'>
-            <img src="img/init.png" onclick="iniciar()"></img>
-            <div id="ingreso">
-                <div id="boton-ingreso-edif" onclick="ingresar()"></div>
-                <video name="video1" id="video1" preload="auto" autoplay="true" poster="img/poster.png" loop>
-                    <source src="https://player.vimeo.com/external/138347444.hd.mp4?s=992a90bc65f743e1fde5b71a03653a76&profile_id=113" type="video/mp4">
-                </video>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <title>Congreso Online</title>
+    <link href="css/animacion.css" rel="stylesheet" type="text/css">
+    <script type="text/javascript" src="js/jquery-1.11.2.min.js"></script>
+    <script type="text/javascript" src="js/animacion.js"></script>
+</head>
+
+<body>
+    <section id='contenidoPrincipal'>
+        <img id="inicio-safari" src="img/init.png" onclick="iniciar()"></img>
+        <div id="ingreso">
+            <div id="menu-inicio">
+                <div id="btn-ingreso-gastro" onclick="ingresar('#pabellon-gastro','#video-gastro')"></div>
+                <div id="btn-ingreso-ortopedia" onclick="ingresar('#pabellon-ortopedia','#video-ortopedia')"></div>
+                <div id="btn-ingreso-otorrino" onclick="ingresar('#pabellon-otorrino','#video-otorrino')"></div>
+                <div id="btn-ingreso-pediatria" onclick="ingresar('#pabellon-pediatria','#video-pediatria')"></div>
+                <div id="btn-ingreso-otras" onclick="ingresar('#pabellon-otras','#video-otras')"></div>
             </div>
-            <div id="interior">
-                <a href="video.html"><div id="boton-interior-edif"></div></a> 
-                <a href="video.html"><div id="boton-interior-edif2"></div></a>
-                <a href="video.html"><div id="boton-interior-edif3"></div></a>
-                <video name="video2" preload="auto" id="video2" poster="img/poster.png">
-                  <source src="https://player.vimeo.com/external/138347442.hd.mp4?s=7d90a9d6de8f757cc08e7e984a163701&profile_id=113" type="video/mp4">
-                  Your browser does not support the video tag.
-                </video>
+            <video name="video1" id="video1" preload="auto" poster="img/StandBy_Loop_imagen.jpg" loop autoplay>
+                <source src="https://player.vimeo.com/external/138923793.hd.mp4?s=a0353b01677c7e9bed0f96199f0a493d&profile_id=119" type="video/mp4">
+            </video>
+        </div>
+        <div id="interior">
+            <div id="nav">
+                <div id="menu">
+                    <ul>
+                        <li>
+                            <a id="home" href="#"><img src="img/congreso_home.jpg"></a>
+                            </img>
+                        </li>
+                        <li><a id="gastro" href="#" onclick="cambiarPabellon('#pabellon-gastro')">GASTROINTESTINAL</a></li>
+                        <li><a id="ortopedia" href="#" onclick="cambiarPabellon('#pabellon-ortopedia')">ORTOPEDIA</a></li>
+                        <li><a id="otorrino" href="#" onclick="cambiarPabellon('#pabellon-otorrino')">OTORRINOLARINGOLOGÍA</a></li>
+                        <li><a id="pediatria" href="#" onclick="cambiarPabellon('#pabellon-pediatria')">PEDIATRÍA</a></li>
+                        <li><a id="otros" href="#" onclick="cambiarPabellon('#pabellon-otras')">OTRAS CONFERENCIAS</a></li>
+                    </ul>
+                </div>
             </div>
-        </section>
-    </body>
+            <div id="pabellon-gastro" class="pabellon">
+                <div class="conferencias">
+                    <a href="video.html">
+                        <div class="boton-interior"></div>
+                    </a>
+
+                </div>
+                <video class="video-interna" name="video-gastro" preload="auto" id="video-gastro" poster='img/StandBy_Loop_imagen.jpg' onended="mostrarMenu()">
+                    <source src="https://player.vimeo.com/external/138917761.hd.mp4?s=6e03615567413eaf6c8c3c561c4769f8&profile_id=119" type="video/mp4"> Su navegador no soporta video
+                </video>
+                <img class="poster-video" id="poster-gastro" src="img/Gastrointestinal_V1.jpg">
+            </div>
+            <div id="pabellon-ortopedia" class="pabellon">
+                <div class="conferencias">
+                    <a href="video.html">
+                        <div class="boton-interior"></div>
+                    </a>
+                    <a href="video.html">
+                        <div class="boton-interior"></div>
+                    </a>
+                </div>
+                <video class="video-interna" name="video-ortopedia" preload="auto" id="video-ortopedia" poster='img/StandBy_Loop_imagen.jpg' onended="mostrarMenu()">
+                    <source src="https://player.vimeo.com/external/138917762.hd.mp4?s=3f6a5ce7d9cf6e8d592eb018fd24348b&profile_id=119" type="video/mp4"> Su navegador no soporta video
+                </video>
+                <img class="poster-video" id="poster-ortopedia" src="img/Ortopedia_V1.jpg">
+            </div>
+            <div id="pabellon-otorrino" class="pabellon">
+            <div class="conferencias">
+                <a href="video.html">
+                    <div class="boton-interior"></div>
+                </a>
+                <a href="video.html">
+                    <div class="boton-interior"></div>
+                </a>
+                <a href="video.html">
+                    <div class="boton-interior"></div>
+                </a>
+            </div>
+            <video class="video-interna" name="video-otorrino" preload="auto" id="video-otorrino" poster="img/StandBy_Loop_imagen.jpg" onended="mostrarMenu()">
+                <source src="https://player.vimeo.com/external/138917764.hd.mp4?s=662246731c47f2d70c440acaa349f637&profile_id=119" type="video/mp4"> Su navegador no soporta video
+            </video>
+            <img class="poster-video" id="poster-ortopedia" src="img/Otorrino_V1.jpg">
+        </div>
+        <div id="pabellon-pediatria" class="pabellon">
+            <div class="conferencias">
+                <a href="video.html">
+                    <div class="boton-interior"></div>
+                </a>
+                <a href="video.html">
+                    <div class="boton-interior"></div>
+                </a>
+            </div>
+            <video class="video-interna" name="video-pediatria" preload="auto" id="video-pediatria" poster="img/StandBy_Loop_imagen.jpg" onended="mostrarMenu()">
+                <source src="https://player.vimeo.com/external/138870403.hd.mp4?s=1f285fb52e24da5c2ff75324f8ece6ac&profile_id=119" type="video/mp4"> Su navegador no soporta video
+            </video>
+            <img class="poster-video" id="poster-ortopedia" src="img/Pediatria_V1.jpg">
+        </div>
+        <div id="pabellon-otras" class="pabellon">
+            <div class="conferencias">
+                <a href="video.html">
+                    <div class="boton-interior"></div>
+                </a>
+                <a href="video.html">
+                    <div class="boton-interior"></div>
+                </a>
+            </div>
+            <video class="video-interna" name="video-otras" preload="auto" poster="img/StandBy_Loop_imagen.jpg" id="video-otras" onended="mostrarMenu()">
+                <source src="https://player.vimeo.com/external/138917763.hd.mp4?s=ebc269c6c98b143c1b30b7f603f21af9&profile_id=119" type="video/mp4"> Su navegador no soporta video
+            </video>
+            <img class="poster-video" id="poster-ortopedia" src="img/Otros_V1.jpg">
+        </div>
+        </div>
+    </section>
+</body>
+
 </html>

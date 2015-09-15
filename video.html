@@ -12,8 +12,8 @@
         <header>
             <div id="encabezado">
                 <div id='titulo'>
-                    <img src="img/home-azul.png" alt="home"/>
-                    <h1>Congreso Online<br><span>Tecnoquímicas</span></h1>
+                    <a href="#"><img id="home" src="img/congreso_home.jpg" alt="home"/></a>
+                    <img id="logo" src="img/logo_congresoOnline.png">
                     <!--<h2>Tecnoquímicas</h2>-->
                 </div>
                 <div id="menu-fijo">
@@ -48,21 +48,43 @@
             </video>
             <div id="conferencia-capitulos">
                 <div id="pauta">
-                    <a href="http://www.tqfarma.com/productos/vademecum-tecnoquimicas/linea-respiratoria/alerfast" target="_blank">
+                    <a id="img-pauta" href="http://www.tqfarma.com/productos/vademecum-tecnoquimicas/linea-respiratoria/alerfast" target="_blank">
                     <img src="img/pauta_alerfast.png"/></a>
+                    <div id="contenedor-cap">
+                        <a href="#"><div class="capitulos capitulo-activo">Capitulo 1</div></a>
+                        <a href="#"><div class="capitulos">Capitulo 2</div></a>
+                        <a href="#"><div class="capitulos">Capitulo 3</div></a>
+                        <a href="#"><div class="capitulos">Capitulo 4</div></a>
+                        <a href="#"><div class="capitulos">Capitulo 5</div></a>
+                    </div>
                 </div>
                 <div id="calificacion">
                     <div id="titulo-calificacion">Calificar esta conferencia</div>
                     <div id="estrellas-calificacion">
-                        <img src="img/estrellita-llena.png" alt="estrella-calificacion" />
+                       <!-- <img src="img/estrellita-llena.png" alt="estrella-calificacion" />
                         <img src="img/estrellita-llena.png" alt="estrella-calificacion" />
                         <img src="img/estrellita-llena.png" alt="estrella-calificacion" />
                         <img src="img/estrellita.png" alt="estrella-calificacion" />
-                        <img src="img/estrellita.png" alt="estrella-calificacion" />
+                        <img src="img/estrellita.png" alt="estrella-calificacion" />-->
+                        <fieldset class="rating">
+                            <input type="radio" id="star5" name="rating" value="5" />
+                            <label class = "full" for="star5" ></label> 
+                            <input type="radio" id="star4" name="rating" value="4" />
+                            <label class = "full" for="star4" ></label>   
+                            <input type="radio" id="star3" name="rating" value="3" />
+                            <label class = "full" for="star3" ></label>    
+                            <input type="radio" id="star2" name="rating" value="2" />
+                            <label class = "full" for="star2" ></label>
+                            <input type="radio" id="star1" name="rating" value="1" />
+                            <label class = "full" for="star1" ></label>
+                        </fieldset>
                     </div>
-                    <div id="total-promedio">4</div>
-                    <div id="grupo-izquierda">
-                        <div id="estrellas-promedio">
+                    
+                    
+                    <div id="promedio">
+                        <div id="total-promedio">4</div>
+                        <div id="grupo-izquierda">
+                            <div id="estrellas-promedio">
                             <img src="img/estrellita-llena.png" alt="estrella-calificacion" />
                             <img src="img/estrellita-llena.png" alt="estrella-calificacion" />
                             <img src="img/estrellita-llena.png" alt="estrella-calificacion" />
@@ -71,33 +93,24 @@
                         </div>
                         <img src="img/munequito.png" alt="munequin" id="munequin"/>
                         <div id="cantidad-votantes">216</div>
+                        </div>
+                        
                     </div>
                 </div>
-               <!-- <div class="capitulos">
-                    <div class="capitulo-activo">Capitulo 1</div>
-                    <div>Capitulo 2</div>
-                    <div>Capitulo 3</div>
-                    <div>Capitulo 4</div>
-                </div>
-                <div class="capitulos">
-                    <div>Capitulo 5</div>
-                    <div>Capitulo 6</div>
-                    <div>Capitulo 7</div>
-                    <div>Capitulo 8</div>
-                </div>-->
+               
             </div>
             <div id="conferencia-navegacion">
-                <div id="regresar">&lt; Regresar</div>
-                <div id="siguiente">Siguiente Conferencia &gt;</div>
+                <a href="#"><div id="regresar">&lt; Regresar</div></a>
+                <a href="#"><div id="siguiente">Siguiente Conferencia &gt;</div></a>
             </div>
         </section>
         <footer>
-            <div id="med">
+           <!-- <div id="med">
                 <div class="nombre-med">Aflux®</div>
                 <div class="nombre-med">Rinaid®</div>
                 <div class="nombre-med">Benzirin® Verde</div>
                 <div class="nombre-med">Aflux®</div>
-            </div>
+            </div>-->
             <div id="logo-tq">
                 <img src="img/tqLogo.png">
             </div>

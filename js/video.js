@@ -23,7 +23,7 @@ function alturaSecciones(){
     
     if(topFoot + 60 > window.innerHeight)
     {
-        $("footer").css('top',topFoot);
+        $("footer").css('top',topFoot - 80);
         $("footer").css('bottom','initial');
     }else
     {
