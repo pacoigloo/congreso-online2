@@ -35,25 +35,7 @@ function ingresar(pabellon, video) {
     videoInt.get(0).play();
 }
 
-                     /*"btn-ingreso-urologia" 
-                    "btn-ingreso-pediatria" 
-                     "btn-ingreso-cardio" 
-                     "btn-ingreso-otros"*
-function ingresar(){
-  
-
-    //Botones links conferencias
-  $("#boton-interior-edif").css('z-index',4);
-  $("#boton-interior-edif" ).css('display','block');
-  
-  $("#boton-interior-edif2").css('z-index',5);
-  $("#boton-interior-edif2" ).css('display','block');
-  
-  $("#boton-interior-edif3").css('z-index',6);
-  $("#boton-interior-edif3" ).css('display','none');
-    //Otros
-  
-}*/
+                    
 function mostrarMenu() {
     $("#nav").fadeIn(1000);
    
